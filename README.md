@@ -18,5 +18,5 @@ URL: <a href='http://absmessenger.herokuapp.com/'>http://absmessenger.herokuapp.
 
 Admin login details:
 
-Username: admin@abstract9.com
-Password: 12345678
+<p>Username: admin@abstract9.com</p>
+<p>Password: 12345678</p>
