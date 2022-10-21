@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class AdminSeeder extends Seeder
 {
@@ -15,9 +15,9 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'name' => 'Abstract9 Admin',
-            'email' => 'admin@abstract9.com',
+        $user = User::create([
+            'name' => 'Moore Advice',
+            'email' => 'admin@mooretask.com',
             'password' => bcrypt(12345678),
             'phone' => '07059836078',
             'user_type' => 'admin',

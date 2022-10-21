@@ -7,7 +7,7 @@
             <div id="msgDiv" class="alert alert-success d-none">
                 <strong>Success!</strong> Message sent successfully
             </div>
-            <div class="card">
+            <div class="card shadow-lg">
                 <div class="card-header">
                     <h5 class="font-weight-bold">New Message to Admin</h5>
                 </div>

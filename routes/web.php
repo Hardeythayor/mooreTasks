@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\MessagesController;
+use App\Http\Controllers\TasksController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,11 +25,14 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::middleware('is_admin')->prefix('messages')->name('messages.')->group(function () {
-    Route::get('/', [MessagesController::class, 'index'])->name('index')->withoutMiddleware('is_admin');
-    Route::get('/admin', [MessagesController::class, 'messages_for_admin_index'])->name('admin');
-    Route::get('/admin/fetch', [MessagesController::class, 'fetch_messages_for_admin'])->name('admin.fetch');
-    Route::post('/send', [MessagesController::class, 'store'])->name('send')->withoutMiddleware('is_admin');
+Route::middleware('is_admin')->prefix('tasks')->name('tasks.')->group(function () {
+    Route::get('/', [TasksController::class, 'index'])->name('index')->withoutMiddleware('is_admin');
+    Route::get('/admin', [TasksController::class, 'tasks_for_admin_index'])->name('admin');
+    Route::post('/admin/fetch', [TasksController::class, 'fetch_tasks_for_admin'])->name('admin.fetch');
+    Route::get('/admin/fetch/{id}', [TasksController::class, 'edit'])->name('edit');
+    Route::post('/create', [TasksController::class, 'store'])->name('create');
+    Route::put('/update/{id}', [TasksController::class, 'update'])->name('update');
+    Route::delete('/delete/{id}', [TasksController::class, 'destroy'])->name('delete');
 });
 
 Route::middleware('is_admin')->prefix('users')->name('users.')->group(function () {
