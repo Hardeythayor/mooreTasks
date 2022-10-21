@@ -13,7 +13,7 @@
     <li>to create, read, update and delete tasks</li>
 </ul>
 
-URL: <a href='http://absmessenger.herokuapp.com/'>http://absmessenger.herokuapp.com/</a>
+URL: <a href='http://mooretasks.demiogegbo.com/'>http://mooretasks.demiogegbo.com/</a>
 
 Admin login details:
 
