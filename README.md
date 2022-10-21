@@ -1,5 +1,5 @@
 <h3>AbsMessenger</h3>
-<h6>This is a simple messaging app with the following features:</h6>
+<h6>This is a simple Task Management app with the following features:</h6>
 <p><b>Admin End: </b></p>
 <ul>
     <li>to see all registered users and their details</li>
@@ -10,13 +10,32 @@
 <p><b>Authentication</b></p>
 <p><b>Admin End: </b></p>
 <ul>
-    <li>to send a message to the admin</li>
-    <li>to  see all the messages that they have sent to admin.</li>
+    <li>to create, read, update and delete tasks</li>
 </ul>
 
 URL: <a href='http://absmessenger.herokuapp.com/'>http://absmessenger.herokuapp.com/</a>
 
 Admin login details:
 
-<p>Username: admin@abstract9.com</p>
+<p>Username: admin@mooretask.com</p>
 <p>Password: 12345678</p>
+
+<p><b>To set up locally</b></p>
+<ul>
+    <li>Fork repository on your personal repository</li>
+    <li>Download or clone to your local machine</li>
+    <li>Open project folder in visual studio code or any editor of choice</li>
+    <li>Run "composer install" from editor's terminal</li>
+    <li>Run "npm install" from editor's terminal</li>
+    <li>Create ".env" file and copy content of ".env.example" to it</li>
+    <li>Create a database from Php my admin interface and name it "moore_advice"</li>
+    <li>Migrate tables to newly created DB by running "php artisan migrate --seed" from editor terminal</li>
+    <li>Run "npm run dev" to start development serve for frontend</li>
+    <li>Run "php artisan serve" to open project in browser</li>
+
+
+
+
+
+</ul>
+
